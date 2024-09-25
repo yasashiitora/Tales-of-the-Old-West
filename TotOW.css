@@ -1,0 +1,685 @@
+@import url('https://fonts.googleapis.com/css?family=Catamaran:800|Montserrat:400:800&display=swap');
+/*	<!-- Tales of the Old West -->
+ Colours for Reference:
+Light Pink: #fde6d3
+Dark Pink: #f8bd90
+Orange: #ee752c
+Shadow Grey: #3d3d29
+
+Deep Purple: #793149
+Dark Purple: #af7b87
+Light Purple: #dac0c3
+Dark Blue: #b0b9c8
+Light Blue: #dce0e9
+*/
+
+.charsheet.lang-sv .sheet-full{
+    background-image: url("https://github.com/yasashiitora/Tales-of-the-Old-West/blob/main/TotOW-banner.jpg?raw=true");
+}
+
+/****** Divs ******/
+div {
+    box-sizing: border-box;
+}
+
+/* Contains the whole page */
+.sheet-wrapper {
+    width: 750px;
+    background-color: white;
+    position: relative;
+    font-size: 14px;
+    font-family: "Catamaran", Gadget, sans-serif;
+    color: black;
+}
+
+/* Spans across the page (title) */
+.sheet-full {
+    position: relative;
+    width: 100%;
+    height: 140px;
+    padding: 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.sheet-full {
+    background-image: url("https://github.com/yasashiitora/Tales-of-the-Old-West/blob/main/TotOW-banner.jpg?raw=true");
+}
+
+/* Creates the left hand column */
+.sheet-left {
+    float: left;
+    width: 42%;
+}
+
+/* Creates the right hand column */
+.sheet-right {
+    float: right;
+    width: 55%;
+}
+
+/* Rows */
+.sheet-label,
+.sheet-boxLight,
+.sheet-boxDark,
+.sheet-exp,
+.sheet-boxInfo,
+.sheet-boxInfoText,
+.sheet-iconic,
+.sheet-relation,
+.sheet-weapons {
+	width: 100%;
+    padding: 5px;
+	border-style: hidden solid solid solid;
+    border-width: 1px;
+    border-color: black;
+    -webkit-box-shadow: 1px 1px 2px 0px #3d3d29;
+    -moz-box-shadow: 1px 1px 2px 0px #3d3d29;
+    box-shadow: 1px 1px 2px 0px #3d3d29;
+	overflow: hidden;
+}
+
+/* Black and white background for headers */
+.sheet-label {
+    padding: .75em;
+    
+    color: white;
+    background-color: #000;
+    background-image: linear-gradient(90deg, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 55%), url("http://i.imgur.com/CDBj8fq.jpg");
+
+    font-size: 11pt;
+    font-family: "Catamaran", sans-serif;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+label {
+    font-size: 10pt;
+    font-family: "Catamaran", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* Light pink rows */
+
+.sheet-boxLight {
+    background-color: #fde6d3;
+}
+
+.sheet-weapons,
+.sheet-iconic,
+.sheet-boxInfo,
+.sheet-boxInfoText,
+.sheet-relation {
+    background-color: #fff2da;
+}
+
+/* Dark pink rows */
+.sheet-boxDark {
+    background-color: #f8bd90;
+}
+
+/* Div for experience */
+.sheet-exp { 
+    background-color: #f8bd90;
+    width: 100%;
+}
+
+/* Div for large checkboxes */
+.sheet-boxChk {
+    float: left;
+    width: 10%;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Left information column on the right */
+.sheet-leftCol {
+    float: left;
+    width: 45%;
+}
+
+/* Right information column on the right */
+.sheet-rightCol {
+    float: right;
+    width: 50%;
+}
+
+.sheet-rightCol select {
+    float: right;
+    width: 40%;
+}
+
+/* faith */
+.sheet-faith {
+    float: left;
+    width: 50%;
+}
+
+/* Item */
+.sheet-item {
+    float: left;
+    width: 10%;
+}
+
+/* Keeps divs position relative to the div on top, even if the top div expands downwards */
+.sheet-clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/****** Input Boxes ******/
+
+.sheet-wrapper input,
+.sheet-wrapper select,
+.sheet-wrapper textarea {
+    border-radius: 0;
+}
+
+/* Number input boxes */
+.sheet-left input[type=number],
+.sheet-right input[type=number] {
+    text-align: center;
+    font-family: "Catamaran", Gadget, sans-serif;
+    font-size: 15px;
+    float: right;
+    width: 50px;
+    border-color: #3d3d29;
+    border-radius: 0;
+    -webkit-box-shadow: 1px 1px 2px 0px rgba(61, 61, 41,0.5);
+    -moz-box-shadow: 1px 1px 2px 0px rgba(61, 61, 41,0.5);
+    box-shadow: 1px 1px 2px 0px rgba(61, 61, 41,0.5);
+}
+
+/* Number input boxes in right column */
+.sheet-rightCol input[type=number],
+.sheet-leftCol input[type=number] {
+    border: none;
+    font-family: "Catamaran", Gadget, sans-serif;
+    font-size: 15px;
+    width: 45%;
+    text-align: center;
+    box-shadow: none;
+}
+
+.sheet-rightCol input[type=number],
+.sheet-leftCol input[type=number] {
+    background-color: #f8bd90;
+}
+
+.sheet-rightCol input[type=number] {
+    float:left;
+}
+
+.sheet-items input[type=number] {
+    width:10%;
+    float:none;
+}
+
+/* Text input boxes */
+.sheet-boxInfo input[type=text],
+.sheet-items input[type=text],
+.sheet-rightCol input[type=text],
+.sheet-leftCol  input[type=text],
+.sheet-iconic  input[type=text],
+.sheet-weaponname  input[type=text] {
+	border: none;
+    font-family: "Catamaran", Gadget, sans-serif;
+    font-size: 15px;
+}
+
+.sheet-boxInfo input[type=text],
+.sheet-items input[type=text],
+.sheet-rightCol input[type=text],
+.sheet-leftCol  input[type=text],
+.sheet-iconic  input[type=text],
+.sheet-weaponname  input[type=text],
+.sheet-weapons  input[type=text],
+.sheet-weaponbox  input[type=text] {
+    background-color: #f8bd90;
+}
+
+/* Name input box */
+.sheet-boxInfo input[type=text] {
+    width: 80%;
+    text-align: center;
+    float: right;
+}
+
+/* Iconic item input box */
+.sheet-iconic input[type=text] {
+    width: 45%;
+    text-align: center;
+}
+
+/* Weapons item input box */
+.sheet-weaponname input[type=text] {
+    width: 35%;
+    text-align: center;
+}
+
+/* Small input boxes for age, faith, etc. */
+.sheet-rightCol input[type=text],
+.sheet-leftCol  input[type=text] {
+    float: right;
+    width: 45%;
+}
+
+/* Label for weapon bonus */
+.sheet-weaponlabel input[type=text] {
+    float: none;
+    width: 15%;
+    text-align: left;
+    padding: 0px 0px 0px 10px;
+}
+
+/* Input boxes for weapons */
+.sheet-weaponbox input[type=number] {
+    float: none;
+    width: 10%;
+    text-align: left;
+}
+/* Input boxes for items */
+.sheet-items input[type=text],
+.sheet-tftf-items input[type=text] {
+    float: none;
+    width: 52%;
+    text-align: left;
+}
+
+/* Input boxes for faith */
+.sheet-faith input[type=number]{
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+/* Input boxes for repeating relationship fields */
+.sheet-relation input[type=text] {
+    float: left;
+    margin-right: 5px;
+    font-family: "Catamaran", Gadget, sans-serif;
+    font-size: 10pt;
+    color: black;
+    border: none;
+    width: 25%;
+    box-shadow: none;
+}
+
+.sheet-relation input[type=text] {
+    background-color: transparent;
+}
+
+/* Labels */
+.sheet-boxInfo label,
+.sheet-rightCol label,
+.sheet-leftCol label,
+.sheet-iconic label {
+    float: left;
+    margin-right: 5px;
+    font-size: 11px;
+    color: black;
+    margin-bottom: 0px;
+}
+
+.sheet-boxDark span,
+.sheet-boxLight span {    
+    font-family: "Catamaran", Gadget, sans-serif;
+    font-size: 13pt;
+}
+
+/* Lables for large input boxes for name, problem, etc. */
+.sheet-boxInfo label {
+	    width: 10%;
+}
+
+/* Lable for iconic item */
+.sheet-iconic label {
+	    width: 17%;
+}
+
+/* Lables for small input boxes for age, etc. */
+.sheet-rightCol label,
+.sheet-leftCol label {
+    width: 35%;
+}
+
+/* Lables for faith */
+.sheet-faith label {
+    width: 20%;
+    margin-right: 10px;
+}
+
+/****** Selection Boxes ******/
+.sheet-boxInfo select,
+.sheet-tftf-boxInfo select {
+    width: 55%;
+    border: none;
+    font-family: "Catamaran", Gadget, sans-serif;
+    font-size: 11px;
+    text-align: left;
+    margin-bottom: 0px;
+}
+
+.sheet-boxInfo select {
+    background-color: #f8bd90;
+}
+
+.sheet-iconic select,
+.sheet-items select {
+    width: 25%;
+    border: none;
+    font-family: "Catamaran", Gadget, sans-serif;
+    font-size: 11px;
+    text-align: left;
+    margin-bottom: 0px;
+}
+
+.sheet-iconic select,
+.sheet-items select {
+    background-color: #f8bd90;
+}
+
+/****** Text Areas ******/
+
+.sheet-right textarea,
+.sheet-tftf-right textarea {
+    width: 98%;
+    height: 115px;
+    resize: vertical;
+    border: none;
+    margin-bottom: 0px;
+}
+
+.sheet-right textarea,
+.sheet-hideout textarea {
+    background-color: #f8bd90;
+}
+
+.sheet-hideout textarea,
+.sheet-tftf-hideout textarea {
+    width: 97%;
+    height: 115px;
+    resize: vertical;
+    border: none;
+    margin-bottom: 0px;
+}
+
+.sheet-boxInfo textarea,
+.sheet-tftf-boxInfo textarea {
+    font-family: "Catamaran", Gadget, sans-serif;
+    font-size: 15px;
+    float: right;
+    width: 78%;
+    height: 20px;
+    margin-bottom: 0px;
+}
+
+.sheet-relation textarea {
+    font-family: "Catamaran", Gadget, sans-serif;
+    font-size: 12px;
+    float: right;
+    width: 70%;
+    height: 20px;
+    margin-bottom: 0px;
+}
+
+/****** Checkboxes ******/
+.sheet-boxDark input[type=checkbox],
+.sheet-boxLight input[type=checkbox],
+.sheet-boxChk input[type=checkbox] {
+    display: none;
+    visibility: hidden;
+}
+
+.sheet-boxLight label,
+.sheet-boxDark label,
+.sheet-tftf-boxLight label,
+.sheet-tftf-boxDark label {
+    float: right;
+    background: #ffffff;
+    height: 20px;
+    width: 20px;
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid #888;
+    display: block;
+    -webkit-box-shadow: 1px 1px 2px 0px #3d3d29;
+    -moz-box-shadow: 1px 1px 2px 0px #3d3d29;
+    box-shadow: 1px 1px 2px 0px #3d3d29;
+    cursor: pointer;
+}
+
+.sheet-boxLight label,
+.sheet-boxDark label,
+.sheet-tftf-boxLight label,
+.sheet-tftf-boxDark label {
+    border-color: #3d3d29;
+}
+
+.sheet-boxChk label {
+    float: clear;
+    margin: 2px;
+    background: #ffffff;
+    height: 20px;
+    width: 20px;
+    padding: 0px;
+    border: 1px solid #888;
+    display: block;
+    border-color: #3d3d29;
+    -webkit-box-shadow: 1px 1px 2px 0px #3d3d29;
+    -moz-box-shadow: 1px 1px 2px 0px #3d3d29;
+    box-shadow: 1px 1px 2px 0px #3d3d29;
+    cursor: pointer;
+}
+
+.sheet-boxLight input[type=checkbox]:checked ~ label,
+.sheet-boxDark input[type=checkbox]:checked ~ label,
+.sheet-boxChk input[type=checkbox]:checked ~ label {
+    background: #ffffff url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Tales%20from%20the%20Loop/Black_check.svg.png") no-repeat right top;
+    background-size: 100%;
+}
+
+/****** Focus Colour ******/
+.sheet-boxInfo input:focus,
+.sheet-boxInfo select:focus,
+.sheet-right textarea:focus,
+.sheet-iconic input:focus,
+.sheet-iconic select:focus,
+.sheet-relation textarea:focus,
+.sheet-hideout textarea:focus {
+    box-shadow: 0 0 10px 0px #ee752c;
+    outline: 1px solid #ee752c;
+}
+
+.sheet-boxInfo input[type=number]:focus{
+    border-color: #3d3d29;
+    -webkit-box-shadow: 1px 1px 2px 0px #3d3d29;
+    -moz-box-shadow: 1px 1px 2px 0px #3d3d29;
+    box-shadow: 1px 1px 2px 0px #3d3d29;
+    outline: none;
+}
+
+/****** Roll Buttons ******/
+/* Roll buttons for attributes and skils */
+.sheet-boxLight button[type=roll],
+.sheet-boxDark button[type=roll],
+.sheet-tftf-boxLight button[type=roll],
+.sheet-tftf-boxDark button[type=roll] {   
+    background-color: transparent;
+    color: black;
+    border: none;
+    font-family: "Catamaran", Gadget, sans-serif;
+    font-size: 13pt;
+    line-height: 15px;
+    background-image: none;
+    text-shadow: none;
+    box-shadow: none;
+    padding: 0px;
+    margin: 0px;
+    font-weight: normal;
+}
+
+/* Changes the attributes and skills to orange while the mouse is hovering over them */
+.sheet-boxDark button[type=roll]:hover,
+.sheet-boxLight button[type=roll]:hover {
+    color: #ee752c;
+}
+
+.sheet-ammo {
+	width: 100%;
+    padding: 5px;
+	overflow: hidden;
+}
+
+.sheet-ammo-boxChk label {
+    float: clear;
+    margin: 2px;
+    background: #ffffff;
+    height: 15px;
+    width: 15px;
+    padding: 0px;
+    border: 1px solid #888;
+    display: block;
+    border-color: #3d3d29;
+    -webkit-box-shadow: 1px 1px 2px 0px #3d3d29;
+    -moz-box-shadow: 1px 1px 2px 0px #3d3d29;
+    box-shadow: 1px 1px 2px 0px #3d3d29;
+    cursor: pointer;
+}
+
+/* Input boxes for horse */
+.sheet-horse input[type=text] {
+    float: left;
+    margin-right: 5px;
+    font-family: "Catamaran", Gadget, sans-serif;
+    font-size: 10pt;
+    color: black;
+    border: 1px solid #888;
+    border-color: #3d3d29;
+    width: 45%;
+    box-shadow: none;
+}
+
+.sheet-horse {
+    background-color: #fff2da;
+}
+
+.sheet-horse label {
+    float: none;
+    width: 20%;
+    text-align: left;
+    padding: 0px 0px 0px 10px;
+}
+
+
+
+/****** Roll Templates ******/
+/* Prevents the roll templates from showing on the character sheet */
+.sheet-hidden {
+    display: none;
+}
+
+/* Background image and container for the roll template */
+.sheet-rolltemplate-simpleAtt .sheet-container,
+.sheet-rolltemplate-simpleSkill .sheet-container,
+.sheet-rolltemplate-simpleItem .sheet-container{
+    width: 210px;
+    height: 189px;
+    padding: 0px;
+    background: url(http://i.imgur.com/aDITA9m.png);
+    background-size: 210px 189px;
+    background-repeat: no-repeat;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+}
+
+/* Title for the roll */
+.sheet-rolltemplate-simpleAtt .sheet-rollType,
+.sheet-rolltemplate-simpleSkill .sheet-rollType,
+.sheet-rolltemplate-simpleItem .sheet-rollType{
+    position: relative;
+    width: 195px;
+    padding: 15px 5px 0px 20px;
+    font-size: 14px;
+    color: #ee752c;
+    font-weight: bold;
+}
+
+/* Character name */
+.sheet-rolltemplate-simpleAtt .sheet-name,
+.sheet-rolltemplate-simpleSkill .sheet-name,
+.sheet-rolltemplate-simpleItem .sheet-name{
+    width: 164px;
+    padding: 0px 5px 5px 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Calculated number of dice to roll */
+.sheet-rolltemplate-simpleAtt .sheet-calc,
+.sheet-rolltemplate-simpleSkill .sheet-calc,
+.sheet-rolltemplate-simpleItem .sheet-calc{
+    width: 164px;
+    padding: 5px 5px 5px 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Damage amount */
+.sheet-rolltemplate-simpleItem .sheet-dmgamt{
+    width: 164px;
+    padding: 5px 5px 5px 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+/* Result of the roll */
+.sheet-rolltemplate-simpleAtt .sheet-result,
+.sheet-rolltemplate-simpleSkill .sheet-result,
+.sheet-rolltemplate-simpleItem .sheet-result{
+    position: absolute; 
+    bottom: 0;
+    width: 164px;
+    padding: 5px 5px 30px 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Removes Roll20 formatting around inline rolls */
+.sheet-rolltemplate-simpleAtt .inlinerollresult,  
+.sheet-rolltemplate-simpleSkill .inlinerollresult,
+.sheet-rolltemplate-simpleItem .inlinerollresult{
+    background-color: transparent;
+    color: #000000;
+    border: none;
+}
+ 
+/* Removes Roll20 formatting around critical successes */
+.sheet-rolltemplate-simpleAtt .inlinerollresult.fullcrit,
+.sheet-rolltemplate-simpleSkill .inlinerollresult.fullcrit,
+.sheet-rolltemplate-simpleItem .inlinerollresult.fullcrit{
+	color: #000000;
+    border: none;
+}
+
+/* Removes Roll20 formatting around critical fails */ 
+.sheet-rolltemplate-simpleAtt .inlinerollresult.fullfail,
+.sheet-rolltemplate-simpleSkill .inlinerollresult.fullfail,
+.sheet-rolltemplate-simpleItem .inlinerollresult.fullfail{
+    color: #000000;
+    border: none;
+}
+
+/* Removes Roll20 formatting around inline rolls */
+.sheet-rolltemplate-simpleAtt .inlinerollresult.importantroll,
+.sheet-rolltemplate-simpleSkill .inlinerollresult.importantroll,
+.sheet-rolltemplate-simpleItem .inlinerollresult.importantroll{
+	color: #000000;
+    border: none;
+}
